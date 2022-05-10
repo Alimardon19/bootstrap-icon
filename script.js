@@ -1,5 +1,6 @@
 var searchInput = document.getElementById('search');
 let randomText = ['COPIED!', 'PASTE ME!', 'WILL DO!', 'GOT IT!', 'RIGHT ONE!'];
+let smile = [ 😁, 😎, 👌, ✌, 🤞, 👍, 😃, 🤙, 🎉, 💣];
 let ICONS = [];
 
 
@@ -15,6 +16,7 @@ function DocumentReady() {
             navigator.clipboard.writeText(copyText.value);
             document.getElementById('copyIcon').innerHTML = event.path[0].outerHTML;
             document.getElementById('copyResult').innerText = randomText[parseInt(Math.random() * 4)];
+	    document.title = `Bootstrap-icon ${smile[parseInt(Math.random() * 9]}`
             copyTime();
             document.getElementById('box').classList.add('active');
         })
